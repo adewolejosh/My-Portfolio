@@ -1,0 +1,50 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="m-mt-5">
+<!--    <div class="row row-cols-1 row-cols-md-2 m-5" style="margin-top: 18%; margin-bottom: 5%; margin-left: 5%; margin-right:5%;">-->
+    <div class="row row-cols-1 row-cols-md-2 m-5">
+        <div class="col-md-5 mb-1 mt-4">
+            <h4 class="headerz">About</h4>
+            <hr/>
+            <div class="mt-xl-4 mt-3 post-body" id="note">
+                <p>
+                    Hi there, Welcome! I am Joshua Adewole.
+                </p>
+                <p>
+                    <h6>Thoughts/Notes:</h6>
+                    <h6>1) Writings would include (but not limited to) my experiences, learning and any other cool stuff.</h6>
+                    <h6>2) Pictures used might be sourced online- e.g google images, or designed by me.</h6>
+                    <h6>3) Let's have fun.</h6>
+                    <h6>4) A comment via <a href="mailto:adewole.josh@gmail.com">adewole.josh@gmail.com</a> is much appreciated</h6>
+                </p>
+            </div>
+        </div>
+        <div class="col-md-7 mb-2 mt-5">
+            <h4 class="headerz">My Articles</h4>
+            <hr/>
+            {% for post in posts %}
+            <div class="row row-cols-1 row-cols-2 ml-1 mr-1 mt-1">
+                <div class="col-3 text-center" id="post-date">
+                    <h5 class="font-weight-bold">{{ post.published_date|date:"d" }}</h5>
+                    <h7>{{ post.published_date|date:"M" }}. - {{ post.published_date|date:"Y" }}</h7>
+                </div>
+                <div class="col-9 text-left">
+                    <a href="{{ post.get_absolute_url }}"><h6 id="post-title">{{ post.title|title }}</h6></a>
+<!--                    <a href="{{ post.get_absolute_url }}"><h6 id="title">{{post.published_date|timesince}}</h6></a>-->
+<!--                    {% if post.published_date|timesince <= "7 days" %}-->
+<!--                        <div><button class="btn btn-sm btn-outline-green">New!</button></div>-->
+<!--                    {% else %}-->
+
+<!--                    {% endif %}-->
+                </div>
+            </div>
+            <hr/>
+            {% empty %}
+                <h3>No blog posts yet</h3>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

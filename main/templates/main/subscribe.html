@@ -1,0 +1,67 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+
+{% block nav %}
+    <header>
+
+          <!--Navbar-->
+          <nav class="navbar navbar-expand-lg navbar-dark blue-gradient lighten-1">
+<!--          <nav class="navbar navbar-expand-lg navbar-dark winter-neva-gradient fixed-top lighten-1">-->
+
+            <!-- Navbar brand -->
+            <a class="navbar-brand ml-5" href="{% url 'home' %}">
+              <strong>Joshy</strong>
+            </a>
+            <!-- Collapse button -->
+            <button class="navbar-toggler second-button" type="button" data-toggle="collapse" data-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+              <div class="animated-icon2"><span></span><span></span><span></span><span></span></div>
+            </button>
+
+            <!-- Collapsible content -->
+            <div class="collapse navbar-collapse" id="mainNav">
+
+              <!-- Links -->
+              <ul class="navbar-nav ml-lg-5">
+                <li class="nav-item active">
+                  <a class="nav-link ml-5" href="#Subscribe">Newsletter</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <!--/.Navbar-->
+
+        </header>
+{% endblock %}
+
+{% block content %}
+    <div class="row row-cols-1 row-col-md-3 mt-5">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 mt-5">
+            <div class="m-5 text-center">
+                {% for msg in messages %}
+                    <div class="fixed-top modal-dialog" role="document">
+                        <div class="modal-content">
+                            {{ msg }}
+                        </div>
+                    </div>
+                {% empty %}
+                {% endfor %}
+                <h4 class="headerz">Subscribe To My NewsLetter</h4>
+                <form class="card p-4 mt-5" method="post">
+                    {% csrf_token %}
+                    <div class="">
+                       <label class="bout-note" for="id_email">Email: </label><input type="email" name="email" maxlength="254" required="" id="id_email">
+                    </div>
+                    <button class="btn btn-sm btn-outline-success text-center" type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

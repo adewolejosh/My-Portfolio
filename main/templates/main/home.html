@@ -1,0 +1,223 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="m-mt-5 ml-5 mr-5 mb-5">
+    <div class="m-5 text-center">
+<!--        <img class="mt-2 img-fluid" id="avatar" src="{% static 'images/homeavatar.png' %}">-->
+        <img class="img-fluid rounded-circle text-center ml-sm-3 mr-sm-3 mb-4 my-photo z-depth-1 waves-effect waves-light rgba-black-slight" src="{% static 'images/josh.jpg' %}"/>
+        <div class="mt-2 mb-3" id="home-intro">
+<!--            <h6 class="animated bounceOutLeft infinite">FullStack Software Engineer</h6>,-->
+<!--            Correct before push-->
+            <h5 class="bout-note">I am Joshua Adewole. </h5><br/>
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <h5 class="animated bounce headerz">a Software Engineer</h5>
+<!--                  <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(35).jpg">-->
+                </div>
+                <div class="carousel-item">
+                    <h5 class="animated bounce headerz">A Systems Engineering Student</h5>
+<!--                  <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(33).jpg">-->
+                </div>
+                <div class="carousel-item">
+                    <h5 class="animated bounce headerz">A Math Geek</h5>
+<!--                  <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(31).jpg">-->
+                </div>
+                <div class="carousel-item">
+                    <h5 class="animated bounce headerz">A Seasonal Writer</h5>
+                </div>
+                 <div class="carousel-item">
+                    <h5 class="animated bounce headerz">A Designer(Graphics & UI/UX)</h5>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-3 mb-3" id="About">
+        <div class="row row-cols-1 row-cols-md-3">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <h4 class="text-left headerz"> About Me </h4><hr/>
+<!--                <img class="img-fluid rounded-circle text-center ml-sm-3 mr-sm-3 mb-4 my-photo" src="{% static 'images/josh.jpg' %}"/>-->
+                <div class="text-left ml-3 mr-3" id="about-note">
+                    <h6>
+                        Hi there, I'm Joshua Adewole. I'm a Software Engineer with experience writing server and client side solutions in Python and JavaScript.
+                        I sometimes design and write- mostly undocumented materials which I hope to change from now(at the time of writing). I'm currently Open to Backend
+                        and/or Fullstack Engineering roles, here's <a href="https://drive.google.com/file/d/1O3Szam4-d4PgkaH5iyRIXh6rsm4gUxkI/view?usp=sharing">My Resume</a>
+                    </h6>
+                    <br/>
+                    <h6>
+                        I started out coding in Python 2, created word games on my little Techno M3 Phone- most of my friends claim my games were hard.
+                        With the help of the book "Learn Python the hard Way" I was able to get used to the Python syntax and then I switched into Python 3, after which
+                        I considered going into mobile development- Kivy but didn't venture instead I decided to go for web development- Django; on this path I was able
+                        to learn django, HTML, CSS and JavaScript extensively. Built quite a number of web apps with this stack; even worked on some Team projects.
+                    </h6>
+                    <br/>
+                    <h6>
+                        Thereafter I made a decision to work on my JavaScript as it seemed to be a very interesting language- which it is. I then took some Hackerrank
+                        challenges and with the help of the book, "Eloquent JavaScript", I garnered more knowledge on JavaScript. Vue Js was calling out to me literally,
+                        I researched about it; for its simplicity, neat and lovely style of code, I took it up. Much thanks to
+                        <a href="https://taniarascia.com">Tania Rascia</a> whose tutorial got me up and running Vue. With that I then made Budget-go.
+                    </h6>
+                    <br/>
+                    <h6>
+                        My Journey so far has been great, quite a number of itches here and there, but I'm so thankful for where I am. As time goes on, I'll be
+                        recounting my experiences, writing tutorials and many other writing expressions on <a href="{% url 'blog-list' %}">My Blog.</a> Feel free
+                        to give it a read and a comment via mail at <a href="mailto:adewole.josh@gmail.com">adewole.josh@gmail.com</a> is very much appreciated and would
+                        definitely be replied.
+                    </h6>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+    <br>
+    <div class="mt-5" id="Projects">
+        <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+        <div class="row row-cols-1 row-cols-md-3">
+
+            <div class="col-md-2">
+            </div>
+
+            <div class="col-md-8">
+                <h4 class="text-left headerz"> Some Amazing Projects </h4><hr/>
+
+                <div class="ml-3 mr-3">
+                    <div id="budgito" class="m-2">
+                        <div class="row row-cols-1 row-cols-md-2">
+                            <div class="col-md-9 text-left p-2">
+                                <h5 class="project-title"><span class="icon"> 📈📉 </span><a href="https://budgito.herokuapp.com/" class="text-dark"> Budgito</a></h5>
+                                <h8 class="text-muted project-details">
+                                    An API for tracking and managing monthly income and expense written in Django(DRF), documented in swagger UI
+                                </h8>
+                            </div>
+                            <div class="col-md-3 text-center mt-xl-3 p-2">
+                                <div class="">
+                                    <a class="gh-ic m-2" href="https://github.com/DSC-Unilag/ohw-2020-11">
+                                       <i class="fab fa-github black-text fa-2x"></i>
+                                    </a>
+                                    <a class="gh-ic m-2" href="https://budgito.herokuapp.com/">
+                                        <span class="iconify fa-2x" data-icon="logos-heroku-icon" data-inline="false"></span>
+                                       <i class="fa-heroku"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <hr/>
+
+                    <div id="budget-go" class="m-2">
+                        <div class="row row-cols-1 row-cols-md-2">
+                            <div class="col-md-9 text-left p-2">
+                                <h5 class="project-title"><span class="icon"> 📈📉 </span><a href="https://budget-go.netlify.app/" class="text-dark"> Budget-go</a></h5>
+                                <h8 class="text-muted project-details">
+                                    A Web app in minimalist design that helps to track and manage monthly budget, made with Vue.js and Material Design Bootsrap
+                                </h8>
+                            </div>
+                            <div class="col-md-3 text-center mt-xl-3 p-2">
+                                <div class="">
+                                    <a class="gh-ic m-2" href="https://github.com/adewolejosh/budget-go">
+                                       <i class="fab fa-github black-text fa-2x"></i>
+                                    </a>
+                                    <a class="gh-ic m-2" href="https://budget-go.netlify.app/">
+                                        <span class="iconify fa-2x" data-icon="logos-netlify" data-inline="false"></span>
+<!--                                        <span class="iconify fa-2x" data-icon="logos-netlify-icon" data-inline="false"></span>-->
+                                       <i class="fab fa-netlify"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <hr/>
+
+                    <div id="kechies" class="m-2">
+                        <div class="row row-cols-1 row-cols-md-2">
+                            <div class="col-md-9 text-left p-2">
+                                <h5 class="project-title"><span class="icon"> 🏬 </span><a href="https://kechies.herokuapp.com/" class="text-dark"> Kechies Accessories</a></h5>
+                                <h8 class="text-muted project-details">
+                                    An E-commerce store made with Django, HTML, CSS, JavaScript and Bootstrap
+                                </h8>
+                            </div>
+                            <div class="col-md-3 text-center mt-xl-3 p-2">
+                                <div class="">
+                                    <a class="gh-ic m-2" href="https://github.com/adewolejosh/kechies">
+                                       <i class="fab fa-github black-text fa-2x"></i>
+                                    </a>
+                                    <a class="gh-ic m-2" href="https://kechies.herokuapp.com/">
+                                        <span class="iconify fa-2x" data-icon="logos-heroku-icon" data-inline="false"></span>
+                                       <i class="fab fa-heroku"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <hr/>
+
+                    <div id="anonymous-messenger" class="m-2">
+                        <div class="row row-cols-1 row-cols-md-2">
+                            <div class="col-md-9 text-left p-2">
+                                <h5 class="project-title"><span class="icon"> 📬 </span><a href="http://kubool.herokuapp.com/" class="text-dark"> Anonymous Messenger</a></h5>
+                                <h8 class="text-muted project-details">
+                                    My Personal Anonymous Messenger Web app made with Django, HTML and CSS
+                                </h8>
+                            </div>
+                            <div class="col-md-3 text-center mt-xl-3 p-2">
+                                <div class="">
+                                    <a class="gh-ic m-2" href="https://github.com/adewolejosh/Anonymous-Messenger">
+                                       <i class="fab fa-github black-text fa-2x"></i>
+                                    </a>
+                                    <a class="gh-ic m-2" href="http://kubool.herokuapp.com/">
+                                        <span class="iconify fa-2x" data-icon="logos-heroku-icon" data-inline="false"></span>
+                                       <i class="fa-heroku"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <hr/>
+
+                    <div id="christmas-tree" class="m-2">
+                        <div class="row row-cols-1 row-cols-md-2">
+                            <div class="col-md-9 text-left p-2">
+                                <h5 class="project-title"><span class="icon"> 🎄 </span><a class="text-dark"> Christmas Tree </a></h5>
+                                <h8 class="text-muted project-details">
+                                    A Christmas design Challenge I tackled simply with Python 3's Turtle module
+                                </h8>
+                            </div>
+                            <div class="col-md-3 text-center mt-xl-3 p-2">
+                                <div class="">
+                                    <a class="gh-ic m-2" href="https://github.com/adewolejosh/christmas-tree-design">
+                                       <i class="fab fa-github black-text fa-2x"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <hr/>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+            </div>
+
+        </div>
+    </div>
+    <br/>
+    <div class="text-center font-weight-bold" id="Contact">
+        Let's have a conversation, Got a cool project or want to be new friend?
+        mail me <a href="mailto:adewole.josh@gmail.com">adewole.josh@gmail.com</a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,164 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <!--  LOCAL  -->
+        <!--  CSS  -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+<!--        <link type="text/css" rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">-->
+<!--        <link type="text/css" rel="stylesheet" href="{% static 'css/mdb.min.css' %}">-->
+<!--        <link type="text/css" rel="stylesheet" href="{% static 'css/blog.css' %}">-->
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+<!--        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">-->
+<!--        <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">-->
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+       <!--   JS   -->
+<!--        <script rel="script" src="{% static 'js/bootstrap.js' %}"></script>-->
+<!--        <script rel="script" src="{% static 'js/jquery.min.js' %}"></script>-->
+<!--        <script rel="script" src="{% static 'js/mdb.min.js' %}"></script>-->
+<!--        <script rel="script" src="{% static 'js/popper.min.js' %}"></script>-->
+<!--        <script rel="script" src="{% static 'js/style.js' %}"></script>-->
+
+    <!--  CDN/LINKS  -->
+        <!--  FONTS  -->
+    <!-- Font Awesome -->
+<!--    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">-->
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <!--  CSS  -->
+        <!--  JS  -->
+                <!-- JQuery -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Bootstrap tooltips -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+        <script rel="script" src="{% static 'js/style.js' %}"></script>
+
+    {% block title %}
+    <title>Josh Adewole | My Blog</title>
+    {% endblock %}
+</head>
+    {% block body %}
+    <body>
+        {% block nav %}
+            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top color-dark">
+<!--          <nav class="navbar navbar-expand-lg navbar-dark winter-neva-gradient fixed-top lighten-1">-->
+
+            <!-- Navbar brand -->
+            <a class="navbar-brand ml-5" href="{% url 'blog-list' %}">
+              <strong>Joshy's Blog</strong>
+<!--              <strong class="headerz">Joshy's Blog</strong>-->
+            </a>
+
+                <!-- Collapse button -->
+                <button class="navbar-toggler second-button color-black" type="button" data-toggle="collapse" data-target="#mainNav"
+                  aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+    <!--              <span class="navbar-toggler-icon"></span>-->
+                  <div class="animated-icon2"><span></span><span></span><span></span><span></span></div>
+                </button>
+
+                <!-- Collapsible content -->
+                <div class="collapse navbar-collapse" id="mainNav">
+
+                  <!-- Links -->
+                  <ul class="navbar-nav ml-lg-5">
+                    <!-- <li class="nav-item active">
+                      <a class="nav-link" href="#">Home
+                        <span class="sr-only">(current)</span>
+                      </a>
+                    </li> -->
+    <!--                <li class="nav-item active ">-->
+    <!--                  <a class="nav-link ml-5" href="#">Home</a>-->
+    <!--                </li>-->
+    <!--                <li class="nav-item">-->
+    <!--                  <a class="nav-link ml-5" href="#About">About</a>-->
+    <!--                </li>-->
+    <!--                <li class="nav-item">-->
+    <!--                  <a class="nav-link ml-5" href="#Portfolio">Portfolio</a>-->
+    <!--                </li>-->
+    <!--                <li class="nav-item ml-5">-->
+    <!--                  <a class="nav-link" href="#Contact">Contact</a>-->
+    <!--                </li>-->
+
+                  </ul>
+                </div>
+            </nav>
+        {% endblock %}
+        {% block content %}
+        {% endblock %}
+        {% block footer %}
+
+            <!-- Footer -->
+            <footer class="page-footer font-small p-2 navbar-light bg-light font-color-dark">
+                <div class="container mt-2">
+                  <div class="row row-cols-1 row-cols-md-3 text-center">
+                      <div class="col-md-2"></div>
+                      <div class="col-md-8">
+                          <a class="ml-2 mr-2" href="{% url 'home' %}">
+                              <button class="btn btn-sm btn-outline-dark">Portfolio</button>
+                          </a>
+                          <a class="ml-2 mr-2" href="#">
+                              <button class="btn btn-sm btn-outline-dark">Podcast</button>
+                          </a>
+                          <a class="ml-2 mr-2" href="{% url 'subscribe' %}">
+                              <button class="btn btn-sm btn-outline-dark">Newsletter</button>
+                          </a>
+                      </div>
+                      <div class="col-md-2"></div>
+                  </div>
+                </div>
+               <div class="container">
+                   <div class="row">
+
+                       <div class="col-md-12 py-5">
+                           <div class="mb-2 flex-center">
+
+                           <a class="fb-ic" href="https://facebook.com/adewole.josh/">
+                               <i class="fab fa-facebook fa-lg black-text mr-md-5 mr-3 fa-2x"></i>
+                           </a>
+                           <a class="tw-ic" href="https://twitter.com/adewole_josh/">
+                               <i class="fab fa-twitter fa-lg black-text mr-md-5 mr-3 fa-2x"></i>
+                           </a>
+                           <a class="li-ic" href="https://www.linkedin.com/in/joshua-adewole-74388b1a0">
+                               <i class="fab fa-linkedin-in fa-lg black-text mr-md-5 mr-3 fa-2x"></i>
+                           </a>
+                           <a class="ins-ic" href="https://instagram.com/kunmi.aj/">
+                               <i class="fab fa-instagram fa-lg black-text mr-md-5 mr-3 fa-2x"></i>
+                           </a>
+                           <a class="gh-ic" href="https://github.com/adewolejosh/">
+                               <i class="fab fa-github fa-lg black-text mr-md-5 mr-3 fa-2x"></i>
+                           </a>
+                           </div>
+                       </div>
+
+                   </div>
+               </div>
+                <div class="footer-copyright text-center py-3">&copy; 2020 Copyright:
+                    <a>Designed and Developed by Joshua Adewole</a>
+                </div>
+            </footer>
+            <!-- /Footer -->
+
+            <!--   JS   -->
+<!--            <script rel="script" src="{% static 'js/jquery.min.js' %}"></script>-->
+<!--            <script rel="script" src="{% static 'js/bootstrap.js' %}"></script>-->
+<!--            <script rel="script" src="{% static 'js/mdb.min.js' %}"></script>-->
+<!--            <script rel="script" src="{% static 'js/popper.min.js' %}"></script>-->
+<!--            <script rel="script" src="{% static 'js/style.js' %}"></script>-->
+        {% endblock %}
+    </body>
+    {% endblock %}
+</html>
