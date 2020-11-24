@@ -3,12 +3,13 @@
 
 {% block content %}
 <div class="m-mt-5">
-    <div class="row row-cols-1 row-cols-md-2 m-5">
+    <div class="row row-cols-1 row-cols-md-3 m-5">
         <div class="col-md-2"></div>
         <div class="col-md-8 mb-2 mt-5">
             <div id="post" class="mb-5">
                 <p>
                     <a href="{% url 'blog-list' %}"><small>← Back to Posts</small></a>
+                    <a class="theme-toggle float-right" id="theme-toggle">🌚</a>
 <!--                    <a class="nav-link ml-5 float-right dark-stuff" id="dark-stuff">🌚</a>-->
                 </p>
                 {% if post %}
